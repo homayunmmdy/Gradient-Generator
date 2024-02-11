@@ -1,89 +1,29 @@
-![2334](https://github.com/homayunmmdy/data-fetching-axios/assets/129702378/49400ca9-ee39-4a4d-b34c-07b61bb3cbd4)
+[video.webm](https://github.com/homayunmmdy/Walmart/assets/129702378/0cc5257d-0f62-4451-a03f-cbd84e640045)
 
-# Simple Data Fetching with Axios and Vite React
+# Gradient Generator
+This project is a gradient generator built using Vite, React, and TypeScript. It allows users to dynamically generate CSS color gradients and customize their orientation.
 
-This repository demonstrates how to perform simple data fetching using Axios with Vite and React. Axios is a popular HTTP client for making asynchronous requests, and Vite is a fast build tool that provides instant server start and blazing fast builds for modern JavaScript applications.
-
-## Prerequisites
-
-Before getting started, ensure you have the following installed on your machine:
-
-- Node.js
-- npm (Node Package Manager) or yarn
+## Features
+- Generate linear or radial gradients.
+- Choose the orientation of the gradient.
+- Select colors using a color picker.
+- View the generated CSS code.
 
 ## Installation
-
-1. Clone this repository to your local machine:
-
-   ```
-   git clone https://github.com/your-username/simple-data-fetching.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```
-   cd simple-data-fetching
-   ```
-
-3. Install dependencies using npm or yarn:
-
-   ```
-   npm install
-   ```
-
-   or
-
-   ```
-   yarn
-   ```
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+4. Run `npm run dev` to start the development server.
 
 ## Usage
+1. Choose the orientation of the gradient by clicking on the corresponding arrow buttons or the radial button.
+2. Use the color pickers to select the starting and ending colors of the gradient.
+3. View the generated CSS code in the box below.
+4. Copy the CSS code and use it in your project.
 
-To run the project, use the following command:
-
-```
-npm run dev
-```
-
-or
-
-```
-yarn dev
-```
-
-This will start the development server, and you can view your React application in the browser at `http://localhost:3000`.
-
-## How it Works
-
-1. **Axios Setup**: Axios is a promise-based HTTP client for the browser and Node.js. In this project, Axios is used to make HTTP requests to a sample API endpoint.
-
-2. **Fetching Data**: Inside the React component (`App.js`), there is an example of fetching data from an API using Axios. The `useEffect` hook is utilized to perform the data fetching when the component mounts.
-
-3. **Displaying Data**: Once the data is fetched successfully, it is displayed in the UI. You can modify `App.js` to format and display the data as needed for your application.
-
-## Folder Structure
-
-- **public**: Contains the HTML template and other static assets.
-- **src**: Contains the React components and application logic.
-  - **components**: Contains reusable React components.
-  - **App.js**: The main React component where data fetching is demonstrated.
-- **package.json**: Contains project metadata and dependencies.
-- **vite.config.js**: Configuration file for Vite.
-
-## Customize
-
-Feel free to customize and extend this project according to your needs. You can modify the Axios configuration, add additional API endpoints, or integrate other libraries as required.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Axios: [https://github.com/axios/axios](https://github.com/axios/axios)
-- Vite: [https://vitejs.dev/](https://vitejs.dev/)
-- React: [https://reactjs.org/](https://reactjs.org/)
-
-## Support
-
-If you encounter any issues or have any questions, feel free to open an issue in the GitHub repository. Contributions are also welcome!
+## Dependencies
+- [chroma-js](https://github.com/gka/chroma.js/): A library for color manipulation.
+- [react-color](https://github.com/casesandberg/react-color): A collection of color pickers for React.
+- [Vite](https://vitejs.dev/): A next-generation frontend tooling.
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/): A statically typed superset of JavaScript.

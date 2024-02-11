@@ -1,26 +1,27 @@
 import "./App.css";
-import "./assets/tailwind.css";
 import arrow from "./assets/img/arrow.svg";
 import radial from "./assets/img/radial.svg";
 import { useState, useEffect } from "react";
 import chroma from "chroma-js";
-import { ChromePicker } from "react-color"; // Import ChromePicker component from react-color
+import { ChromePicker, ColorResult } from "react-color"; 
 
 function App() {
   const [color1, setColor1] = useState("#000000");
   const [color2, setColor2] = useState("#41417B");
   const [direction, setDirection] = useState("linear-gradient");
-  const [generatedColors, setGeneratedColors] = useState([]);
+  const [generatedColors, setGeneratedColors] = useState<string[]>([]);
   const [orientation, setOrientation] = useState("to right bottom");
   const [error, setError] = useState("");
-  const [invertedColor1, setInvertedColor1] = useState("");
-  const [invertedColor2, setInvertedColor2] = useState("");
+// @ts-expect-error: Uninitialized variable
+const [invertedColor1, setInvertedColor1] = useState("");
+// @ts-expect-error: Uninitialized variable
+const [invertedColor2, setInvertedColor2] = useState("");
 
   useEffect(() => {
     generateColors();
   }, [color1, color2]);
 
-  const changeOrientation = (ori) => {
+  const changeOrientation = (ori : string) => {
     setDirection(ori === "circle" ? "radial-gradient" : "linear-gradient");
     setOrientation(ori);
   };
@@ -46,9 +47,9 @@ function App() {
 
   const handleColorChange = (color:string, type:string) => {
     if (type === "color1") {
-      setColor1(color.hex);
+      setColor1(color);
     } else {
-      setColor2(color.hex);
+      setColor2(color);
     }
   };
 
@@ -63,7 +64,7 @@ function App() {
 
   return (
     <div
-      className="flex items-center bg-gray-900 justify-center md:fixed h-screen inset-0 px-10"
+      className="flex items-center bg-gray-900 justify-center md:fixed h-full inset-0 px-10"
       style={ulStyle}
     >
       <div className="px-4 py-6">
@@ -163,11 +164,11 @@ function App() {
           <div className="flex gap-5 justify-center items-center flex-wrap">
             <ChromePicker
               color={color1}
-              onChange={(color:string) => handleColorChange(color, "color1")}
+              onChange={(color:ColorResult) => handleColorChange(color.hex, "color1")}
             />
             <ChromePicker
               color={color2}
-              onChange={(color:string) => handleColorChange(color, "color2")}
+              onChange={(color:ColorResult) => handleColorChange(color.hex, "color2")}
             />
           </div>
         </div>
