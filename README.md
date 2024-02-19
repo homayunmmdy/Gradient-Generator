@@ -1,4 +1,4 @@
-[video.webm](https://github.com/homayunmmdy/Walmart/assets/129702378/0cc5257d-0f62-4451-a03f-cbd84e640045)
+https://github.com/homayunmmdy/Gradient-Generator/assets/129702378/20c95033-4c6d-42c8-ad8c-d8902c51af0a
 
 # Gradient Generator
 This project is a gradient generator built using Vite, React, and TypeScript. It allows users to dynamically generate CSS color gradients and customize their orientation.
